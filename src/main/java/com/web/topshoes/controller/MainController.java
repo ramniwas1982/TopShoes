@@ -79,7 +79,7 @@ private LoginJobSeekerRepository loginJobSeekerRepository;
 	@RequestMapping("employerLogin")
 	public String employerLogin(HttpServletRequest request) {
 		
-		return "loginJobSeeker";
+		return "loginEmployer";
 		
 	}
 }
