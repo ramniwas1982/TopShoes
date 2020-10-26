@@ -76,5 +76,10 @@ private LoginJobSeekerRepository loginJobSeekerRepository;
 		return "loginJobSeeker";
 		
 	}
-	
+	@RequestMapping("employerLogin")
+	public String employerLogin(HttpServletRequest request) {
+		
+		return "loginJobSeeker";
+		
+	}
 }
