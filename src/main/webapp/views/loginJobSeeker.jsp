@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+    <meta name="google-signin-client_id" content="1086665189747-dr5ls5d99j05dat9r0jl3m8nkkf2md30.apps.googleusercontent.com">
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -9,6 +10,19 @@
         <title>BigToBrand</title>
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+         </script>  
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script>
+        function onSignIn(googleUser) {
+        	  var profile = googleUser.getBasicProfile();
+        	  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        	  console.log('Name: ' + profile.getName());
+        	  console.log('Image URL: ' + profile.getImageUrl());
+        	  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        	}
+        </script>
+        
     </head>
     <body class="bg-primary">
         <div id="layoutAuthentication">
@@ -40,6 +54,7 @@
                                                 <a class="small" href="forgotpassword">Forgot Password?</a>
                                                <input type="submit" value="login"/>
                                             </div>
+                                           <div class="g-signin2" data-onsuccess="onSignIn"></div>
                                         </form>
                                     </div>
                                     <div class="card-footer text-center">
